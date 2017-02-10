@@ -10,11 +10,12 @@
 		0A07BAA81E4CA69700AA7E8B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A07BAA71E4CA69700AA7E8B /* AppDelegate.swift */; };
 		0A07BAAF1E4CA69800AA7E8B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A07BAAE1E4CA69800AA7E8B /* Assets.xcassets */; };
 		0A07BAB21E4CA69800AA7E8B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A07BAB01E4CA69800AA7E8B /* LaunchScreen.storyboard */; };
-		0A07BABA1E4CC5A200AA7E8B /* APPTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A07BAB91E4CC5A200AA7E8B /* APPTabBarController.swift */; };
-		0ACBF4B71E4D55DF009672CA /* DairyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACBF4B61E4D55DF009672CA /* DairyVC.swift */; };
-		0ACBF4B91E4D5602009672CA /* ExperienceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACBF4B81E4D5602009672CA /* ExperienceVC.swift */; };
-		0ACBF4BB1E4D5622009672CA /* MessageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACBF4BA1E4D5622009672CA /* MessageVC.swift */; };
-		0ACBF4BD1E4D5633009672CA /* MineVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACBF4BC1E4D5633009672CA /* MineVC.swift */; };
+		0A376F581E4DE37D00AABE7C /* ExperienceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A376F431E4DE37D00AABE7C /* ExperienceVC.swift */; };
+		0A376F591E4DE37D00AABE7C /* DairyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A376F481E4DE37D00AABE7C /* DairyVC.swift */; };
+		0A376F5B1E4DE37D00AABE7C /* MineVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A376F4E1E4DE37D00AABE7C /* MineVC.swift */; };
+		0A376F5D1E4DE37D00AABE7C /* MessageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A376F541E4DE37D00AABE7C /* MessageVC.swift */; };
+		0A376F5F1E4DE44600AABE7C /* AnimalPlantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A376F5E1E4DE44600AABE7C /* AnimalPlantView.swift */; };
+		0A376F651E4DE4A800AABE7C /* APPTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A376F621E4DE4A800AABE7C /* APPTabBarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,11 +24,12 @@
 		0A07BAAE1E4CA69800AA7E8B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0A07BAB11E4CA69800AA7E8B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0A07BAB31E4CA69800AA7E8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0A07BAB91E4CC5A200AA7E8B /* APPTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APPTabBarController.swift; sourceTree = "<group>"; };
-		0ACBF4B61E4D55DF009672CA /* DairyVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DairyVC.swift; sourceTree = "<group>"; };
-		0ACBF4B81E4D5602009672CA /* ExperienceVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExperienceVC.swift; sourceTree = "<group>"; };
-		0ACBF4BA1E4D5622009672CA /* MessageVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageVC.swift; sourceTree = "<group>"; };
-		0ACBF4BC1E4D5633009672CA /* MineVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MineVC.swift; sourceTree = "<group>"; };
+		0A376F431E4DE37D00AABE7C /* ExperienceVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExperienceVC.swift; sourceTree = "<group>"; };
+		0A376F481E4DE37D00AABE7C /* DairyVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DairyVC.swift; sourceTree = "<group>"; };
+		0A376F4E1E4DE37D00AABE7C /* MineVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MineVC.swift; sourceTree = "<group>"; };
+		0A376F541E4DE37D00AABE7C /* MessageVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageVC.swift; sourceTree = "<group>"; };
+		0A376F5E1E4DE44600AABE7C /* AnimalPlantView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimalPlantView.swift; sourceTree = "<group>"; };
+		0A376F621E4DE4A800AABE7C /* APPTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APPTabBarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,16 +63,177 @@
 			isa = PBXGroup;
 			children = (
 				0A07BAA71E4CA69700AA7E8B /* AppDelegate.swift */,
-				0A07BAB91E4CC5A200AA7E8B /* APPTabBarController.swift */,
-				0ACBF4B61E4D55DF009672CA /* DairyVC.swift */,
-				0ACBF4B81E4D5602009672CA /* ExperienceVC.swift */,
-				0ACBF4BA1E4D5622009672CA /* MessageVC.swift */,
-				0ACBF4BC1E4D5633009672CA /* MineVC.swift */,
+				0A376F461E4DE37D00AABE7C /* 日记 */,
+				0A376F401E4DE37D00AABE7C /* 经验 */,
+				0A376F511E4DE37D00AABE7C /* 消息 */,
+				0A376F4B1E4DE37D00AABE7C /* 我的 */,
+				0A376F601E4DE4A800AABE7C /* 其他 */,
 				0A07BAAE1E4CA69800AA7E8B /* Assets.xcassets */,
 				0A07BAB01E4CA69800AA7E8B /* LaunchScreen.storyboard */,
 				0A07BAB31E4CA69800AA7E8B /* Info.plist */,
 			);
 			path = "animal-plant_pool";
+			sourceTree = "<group>";
+		};
+		0A376F401E4DE37D00AABE7C /* 经验 */ = {
+			isa = PBXGroup;
+			children = (
+				0A376F411E4DE37D00AABE7C /* Controller */,
+				0A376F441E4DE37D00AABE7C /* Model */,
+				0A376F451E4DE37D00AABE7C /* View */,
+			);
+			path = "经验";
+			sourceTree = "<group>";
+		};
+		0A376F411E4DE37D00AABE7C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0A376F431E4DE37D00AABE7C /* ExperienceVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		0A376F441E4DE37D00AABE7C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0A376F451E4DE37D00AABE7C /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0A376F461E4DE37D00AABE7C /* 日记 */ = {
+			isa = PBXGroup;
+			children = (
+				0A376F471E4DE37D00AABE7C /* Controller */,
+				0A376F491E4DE37D00AABE7C /* Model */,
+				0A376F4A1E4DE37D00AABE7C /* View */,
+			);
+			path = "日记";
+			sourceTree = "<group>";
+		};
+		0A376F471E4DE37D00AABE7C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0A376F481E4DE37D00AABE7C /* DairyVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		0A376F491E4DE37D00AABE7C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0A376F4A1E4DE37D00AABE7C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0A376F5E1E4DE44600AABE7C /* AnimalPlantView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0A376F4B1E4DE37D00AABE7C /* 我的 */ = {
+			isa = PBXGroup;
+			children = (
+				0A376F4C1E4DE37D00AABE7C /* Controller */,
+				0A376F4F1E4DE37D00AABE7C /* Model */,
+				0A376F501E4DE37D00AABE7C /* View */,
+			);
+			path = "我的";
+			sourceTree = "<group>";
+		};
+		0A376F4C1E4DE37D00AABE7C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0A376F4E1E4DE37D00AABE7C /* MineVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		0A376F4F1E4DE37D00AABE7C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0A376F501E4DE37D00AABE7C /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0A376F511E4DE37D00AABE7C /* 消息 */ = {
+			isa = PBXGroup;
+			children = (
+				0A376F521E4DE37D00AABE7C /* Controller */,
+				0A376F551E4DE37D00AABE7C /* Model */,
+				0A376F561E4DE37D00AABE7C /* View */,
+			);
+			path = "消息";
+			sourceTree = "<group>";
+		};
+		0A376F521E4DE37D00AABE7C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0A376F541E4DE37D00AABE7C /* MessageVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		0A376F551E4DE37D00AABE7C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0A376F561E4DE37D00AABE7C /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0A376F601E4DE4A800AABE7C /* 其他 */ = {
+			isa = PBXGroup;
+			children = (
+				0A376F611E4DE4A800AABE7C /* Controller */,
+				0A376F631E4DE4A800AABE7C /* Model */,
+				0A376F641E4DE4A800AABE7C /* View */,
+			);
+			path = "其他";
+			sourceTree = "<group>";
+		};
+		0A376F611E4DE4A800AABE7C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0A376F621E4DE4A800AABE7C /* APPTabBarController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		0A376F631E4DE4A800AABE7C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0A376F641E4DE4A800AABE7C /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -145,12 +308,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A376F5B1E4DE37D00AABE7C /* MineVC.swift in Sources */,
 				0A07BAA81E4CA69700AA7E8B /* AppDelegate.swift in Sources */,
-				0ACBF4BD1E4D5633009672CA /* MineVC.swift in Sources */,
-				0ACBF4BB1E4D5622009672CA /* MessageVC.swift in Sources */,
-				0ACBF4B71E4D55DF009672CA /* DairyVC.swift in Sources */,
-				0ACBF4B91E4D5602009672CA /* ExperienceVC.swift in Sources */,
-				0A07BABA1E4CC5A200AA7E8B /* APPTabBarController.swift in Sources */,
+				0A376F5F1E4DE44600AABE7C /* AnimalPlantView.swift in Sources */,
+				0A376F5D1E4DE37D00AABE7C /* MessageVC.swift in Sources */,
+				0A376F581E4DE37D00AABE7C /* ExperienceVC.swift in Sources */,
+				0A376F651E4DE4A800AABE7C /* APPTabBarController.swift in Sources */,
+				0A376F591E4DE37D00AABE7C /* DairyVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

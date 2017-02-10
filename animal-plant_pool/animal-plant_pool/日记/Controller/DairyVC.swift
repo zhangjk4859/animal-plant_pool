@@ -32,6 +32,9 @@ class DairyVC: UIViewController {
         weatherView?.layer.masksToBounds = true
         view.addSubview(weatherView!);
         
+        //放动物和植物标签，一个view包裹两个imageView
+        
+        
         
     }
     
