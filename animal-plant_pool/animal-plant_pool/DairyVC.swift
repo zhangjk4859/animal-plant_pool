@@ -18,52 +18,107 @@ class DairyVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //设置基本功能
+        //设置基础视图
         setBasicFeathers()
         
-        
-        //天气模块
-        weatherView = UIImageView(image: UIImage(named: "weather_sun_day_big"))
-          //往下挪
-        weatherView?.frame.origin.y += 64
+        //设置天气图片
+        weatherView = setWeatherView(imageName:"weather_sun_day_small")
+        var viewFrame = weatherView?.frame
+        viewFrame?.size.width -= 60
+        viewFrame?.origin.x += 30
+        weatherView?.frame = viewFrame!
+        let height = weatherView?.frame.height
+        weatherView?.layer.cornerRadius = height! * 0.5
+        weatherView?.layer.masksToBounds = true
         view.addSubview(weatherView!);
-        let tap = UITapGestureRecognizer(target: self, action:#selector(self.tapView(_:)))
-        weatherView?.addGestureRecognizer(tap)
-        weatherView?.isUserInteractionEnabled = true
-        
         
         
     }
+    
+    
 
     //点击图片效果
      func tapView(_ tap: UITapGestureRecognizer){
         
         //产生波纹
+        circleAffect(tap: tap)
+        
+        //动画放大原理分两步
+          //第一，取消圆形切割，放大宽度
+        UIView.animate(withDuration: 1, delay: 0, options: UIViewAnimationOptions.curveEaseInOut, animations: {
+            var viewFrame = self.weatherView?.frame
+            viewFrame?.size.width = UIScreen.main.bounds.width
+            viewFrame?.origin.x = 0
+            self.weatherView?.frame = viewFrame!
+            self.weatherView?.layer.cornerRadius = 0
+            self.weatherView?.layer.masksToBounds = false
+
+            
+            }) { (Bool) in  // 第一次动画完成后
+                
+                //更换大图片，往下挪
+                self.weatherView = self.setWeatherView(imageName: "weather_sun_day_big")
+                var viewFrame = self.weatherView?.frame
+                viewFrame?.origin.y = (viewFrame?.origin.y)! - (UIScreen.main.bounds.height * 0.5 - (viewFrame?.size.height)!)
+                viewFrame?.size = CGSize(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height * 0.5)
+                self.weatherView?.frame = viewFrame!
+                
+                //动画开始往下挪
+                UIView.animate(withDuration: 2, delay: 0, options: UIViewAnimationOptions.curveEaseInOut, animations: {
+                    viewFrame?.origin.y = 64
+                    self.weatherView?.frame = viewFrame!
+                }) { (Bool) in
+                    
+                }
+                
+        }
+        
+        
+        
+    }
+    
+    //设置天气图片
+    private func setWeatherView(imageName:String)->UIImageView{
+        
+        if weatherView == nil {
+            weatherView = UIImageView(image: UIImage(named:imageName))
+            //往下挪
+            weatherView?.frame.origin.y += 64
+            let tap = UITapGestureRecognizer(target: self, action:#selector(self.tapView(_:)))
+            weatherView?.addGestureRecognizer(tap)
+            weatherView?.isUserInteractionEnabled = true
+        }else{
+            weatherView?.image = UIImage(named: imageName)
+        }
+        return weatherView!
+    }
+    
+    //产生波纹的动画效果
+    private func circleAffect(tap: UITapGestureRecognizer){
         let locationPoint = tap.location(in:weatherView)
         weatherView?.addSubview(rippView!)
         rippView?.center = locationPoint
-        rippView?.transform = CGAffineTransform(scaleX: 0.5, y: 0.5)
+        rippView?.transform = CGAffineTransform(scaleX: 0.1, y: 0.1)
         UIView.animate(withDuration: 0.1, animations: {
-                            self.rippView?.alpha = 1
-                        })
+            self.rippView?.alpha = 0.5
+        })
         UIView.animate(withDuration: 0.4, delay: 0, options: UIViewAnimationOptions.curveEaseInOut, animations: {
             
             self.rippView?.transform = CGAffineTransform(scaleX: 1,y: 1);
             self.rippView?.alpha=0;
             
-            }) { (Bool) in
+        }) { (Bool) in
             self.rippView?.removeFromSuperview()
         }
-        
     }
     
-    //设置固定功能
+    //设置基础视图
     private func setBasicFeathers(){
         //设置波纹图片
         rippView = UIView()
-        rippView?.frame = CGRect(x: 0, y: 0, width: 300, height: 300)
-        rippView?.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.3)
-        rippView?.layer.cornerRadius = 150
+        rippView?.frame = CGRect(x: 0, y: 0, width: 200, height: 200)
+        rippView?.backgroundColor = UIColor(red: 255, green: 255, blue: 255, alpha: 0.3)
+        rippView?.layer.cornerRadius = 100
         rippView?.layer.masksToBounds = true
         //设置导航栏右边图标
         let img = UIImage(named: "release")?.withRenderingMode(UIImageRenderingMode.alwaysOriginal)

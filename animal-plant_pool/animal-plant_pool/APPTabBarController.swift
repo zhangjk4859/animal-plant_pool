@@ -42,18 +42,7 @@ class APPTabBarController: UITabBarController {
         nav.tabBarItem = UITabBarItem(title:title,image:UIImage(named:imageName)?.withRenderingMode(UIImageRenderingMode.alwaysOriginal),selectedImage:UIImage(named:selectedImageName)?.withRenderingMode(UIImageRenderingMode.alwaysOriginal))
         //设置导航标题
         nav.navigationBar.topItem?.title = "动植大池"
-//      nav.navigationBar.titleTextAttributes =  [ NSFontAttributeName:, NSForegroundColorAttributeName: UIColor.black]
         return nav
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
