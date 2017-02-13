@@ -14,6 +14,8 @@ class DairyVC: UIViewController {
     var weatherView:UIImageView?
     //点击波纹图片
     var rippView:UIView?
+    //宠物和植物日记本图标
+    var apView:AnimalPlantView?
     
     
     override func viewDidLoad() {
@@ -33,13 +35,11 @@ class DairyVC: UIViewController {
         view.addSubview(weatherView!);
         
         //放动物和植物标签，一个view包裹两个imageView
-        
-        
-        
+        apView = AnimalPlantView(frame: CGRect(x: 0, y: (weatherView?.frame)!.maxY , width: view.width, height: 130))
+        view.addSubview(apView!)
+      
     }
     
-    
-
     //点击图片效果
      func tapView(_ tap: UITapGestureRecognizer){
         
@@ -70,13 +70,11 @@ class DairyVC: UIViewController {
                 UIView.animate(withDuration: 2, delay: 0, options: UIViewAnimationOptions.curveEaseInOut, animations: {
                     viewFrame?.origin.y = 64
                     self.weatherView?.frame = viewFrame!
+                    self.apView?.y = (self.weatherView?.frame)!.maxY
                 }) { (Bool) in
                     
                 }
-                
         }
-        
-        
         
     }
     
@@ -120,7 +118,7 @@ class DairyVC: UIViewController {
         //设置波纹图片
         rippView = UIView()
         rippView?.frame = CGRect(x: 0, y: 0, width: 200, height: 200)
-        rippView?.backgroundColor = UIColor(red: 255, green: 255, blue: 255, alpha: 0.3)
+        rippView?.backgroundColor = UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 0.3)
         rippView?.layer.cornerRadius = 100
         rippView?.layer.masksToBounds = true
         //设置导航栏右边图标
@@ -128,7 +126,7 @@ class DairyVC: UIViewController {
         let item = UIBarButtonItem(image: img, style: UIBarButtonItemStyle.plain, target: self, action: nil)
         self.navigationItem.rightBarButtonItem = item
         //设置背景为白色
-        view.backgroundColor = UIColor.white
+        view.backgroundColor = UIColor(red: 210/255, green: 210/255, blue: 210/255, alpha: 1.0)
     }
     
     

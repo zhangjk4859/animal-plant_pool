@@ -16,6 +16,7 @@
 		0A376F5D1E4DE37D00AABE7C /* MessageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A376F541E4DE37D00AABE7C /* MessageVC.swift */; };
 		0A376F5F1E4DE44600AABE7C /* AnimalPlantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A376F5E1E4DE44600AABE7C /* AnimalPlantView.swift */; };
 		0A376F651E4DE4A800AABE7C /* APPTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A376F621E4DE4A800AABE7C /* APPTabBarController.swift */; };
+		0A376F681E518F8200AABE7C /* UIView+Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A376F671E518F8200AABE7C /* UIView+Category.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		0A376F541E4DE37D00AABE7C /* MessageVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageVC.swift; sourceTree = "<group>"; };
 		0A376F5E1E4DE44600AABE7C /* AnimalPlantView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimalPlantView.swift; sourceTree = "<group>"; };
 		0A376F621E4DE4A800AABE7C /* APPTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APPTabBarController.swift; sourceTree = "<group>"; };
+		0A376F671E518F8200AABE7C /* UIView+Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Category.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -207,6 +209,7 @@
 		0A376F601E4DE4A800AABE7C /* 其他 */ = {
 			isa = PBXGroup;
 			children = (
+				0A376F661E5162F100AABE7C /* 公有 */,
 				0A376F611E4DE4A800AABE7C /* Controller */,
 				0A376F631E4DE4A800AABE7C /* Model */,
 				0A376F641E4DE4A800AABE7C /* View */,
@@ -234,6 +237,14 @@
 			children = (
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		0A376F661E5162F100AABE7C /* 公有 */ = {
+			isa = PBXGroup;
+			children = (
+				0A376F671E518F8200AABE7C /* UIView+Category.swift */,
+			);
+			path = "公有";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -310,6 +321,7 @@
 			files = (
 				0A376F5B1E4DE37D00AABE7C /* MineVC.swift in Sources */,
 				0A07BAA81E4CA69700AA7E8B /* AppDelegate.swift in Sources */,
+				0A376F681E518F8200AABE7C /* UIView+Category.swift in Sources */,
 				0A376F5F1E4DE44600AABE7C /* AnimalPlantView.swift in Sources */,
 				0A376F5D1E4DE37D00AABE7C /* MessageVC.swift in Sources */,
 				0A376F581E4DE37D00AABE7C /* ExperienceVC.swift in Sources */,
