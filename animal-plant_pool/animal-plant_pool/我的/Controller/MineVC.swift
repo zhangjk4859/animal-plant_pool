@@ -68,7 +68,7 @@ class MineVC: UITableViewController {
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         if section == 0 {
             let headView = Bundle.main.loadNibNamed(String(describing:HeaderView.self), owner: self, options: nil)?.first as! HeaderView
-            headView.backgroundColor = UIColor.cyan
+            headView.focusLabel.text = "38"
             return headView
         }else{
             return nil
