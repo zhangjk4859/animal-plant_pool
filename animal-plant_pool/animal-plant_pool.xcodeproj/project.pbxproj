@@ -21,6 +21,10 @@
 		0A8E56B71E541727008EFA50 /* MineVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8E56B61E541727008EFA50 /* MineVC.swift */; };
 		0A8E56B91E543CAC008EFA50 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8E56B81E543CAC008EFA50 /* HeaderView.swift */; };
 		0A8E56BB1E543CD8008EFA50 /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A8E56BA1E543CD8008EFA50 /* HeaderView.xib */; };
+		0A8E56ED1E553EA3008EFA50 /* Tool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8E56EC1E553EA3008EFA50 /* Tool.swift */; };
+		0A8E56F81E5551A0008EFA50 /* CommentTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8E56F51E5551A0008EFA50 /* CommentTableVC.swift */; };
+		0A8E56F91E5551A0008EFA50 /* LikeTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8E56F61E5551A0008EFA50 /* LikeTableVC.swift */; };
+		0A8E56FA1E5551A0008EFA50 /* MessageTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8E56F71E5551A0008EFA50 /* MessageTableVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +44,10 @@
 		0A8E56B61E541727008EFA50 /* MineVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MineVC.swift; sourceTree = "<group>"; };
 		0A8E56B81E543CAC008EFA50 /* HeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		0A8E56BA1E543CD8008EFA50 /* HeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeaderView.xib; sourceTree = "<group>"; };
+		0A8E56EC1E553EA3008EFA50 /* Tool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tool.swift; sourceTree = "<group>"; };
+		0A8E56F51E5551A0008EFA50 /* CommentTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentTableVC.swift; sourceTree = "<group>"; };
+		0A8E56F61E5551A0008EFA50 /* LikeTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LikeTableVC.swift; sourceTree = "<group>"; };
+		0A8E56F71E5551A0008EFA50 /* MessageTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageTableVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -198,6 +206,7 @@
 			isa = PBXGroup;
 			children = (
 				0A376F541E4DE37D00AABE7C /* MessageVC.swift */,
+				0A8E56F41E5551A0008EFA50 /* subController */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -219,7 +228,7 @@
 		0A376F601E4DE4A800AABE7C /* 其他 */ = {
 			isa = PBXGroup;
 			children = (
-				0A376F661E5162F100AABE7C /* 公有 */,
+				0A376F661E5162F100AABE7C /* 公有功能 */,
 				0A376F611E4DE4A800AABE7C /* Controller */,
 				0A376F631E4DE4A800AABE7C /* Model */,
 				0A376F641E4DE4A800AABE7C /* View */,
@@ -251,12 +260,24 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		0A376F661E5162F100AABE7C /* 公有 */ = {
+		0A376F661E5162F100AABE7C /* 公有功能 */ = {
 			isa = PBXGroup;
 			children = (
 				0A376F671E518F8200AABE7C /* UIView+Category.swift */,
+				0A8E56EC1E553EA3008EFA50 /* Tool.swift */,
 			);
+			name = "公有功能";
 			path = "公有";
+			sourceTree = "<group>";
+		};
+		0A8E56F41E5551A0008EFA50 /* subController */ = {
+			isa = PBXGroup;
+			children = (
+				0A8E56F51E5551A0008EFA50 /* CommentTableVC.swift */,
+				0A8E56F61E5551A0008EFA50 /* LikeTableVC.swift */,
+				0A8E56F71E5551A0008EFA50 /* MessageTableVC.swift */,
+			);
+			path = subController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -332,16 +353,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A8E56F81E5551A0008EFA50 /* CommentTableVC.swift in Sources */,
 				0A07BAA81E4CA69700AA7E8B /* AppDelegate.swift in Sources */,
 				0A8E56B71E541727008EFA50 /* MineVC.swift in Sources */,
 				0A376F681E518F8200AABE7C /* UIView+Category.swift in Sources */,
+				0A8E56ED1E553EA3008EFA50 /* Tool.swift in Sources */,
 				0A376F5F1E4DE44600AABE7C /* AnimalPlantView.swift in Sources */,
 				0A376F5D1E4DE37D00AABE7C /* MessageVC.swift in Sources */,
 				0A376F6A1E52AC8E00AABE7C /* LoginVC.swift in Sources */,
 				0A37D3511E54071A008F91C8 /* JKVerticalButton.swift in Sources */,
 				0A8E56B91E543CAC008EFA50 /* HeaderView.swift in Sources */,
 				0A376F581E4DE37D00AABE7C /* ExperienceVC.swift in Sources */,
+				0A8E56FA1E5551A0008EFA50 /* MessageTableVC.swift in Sources */,
 				0A376F651E4DE4A800AABE7C /* APPTabBarController.swift in Sources */,
+				0A8E56F91E5551A0008EFA50 /* LikeTableVC.swift in Sources */,
 				0A376F591E4DE37D00AABE7C /* DairyVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -16,7 +16,7 @@ class MineVC: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        //注册cell®️™
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         
         //cell的标题
@@ -29,11 +29,12 @@ class MineVC: UITableViewController {
 
     // MARK: - Table view data source
     
+    //多少行
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
     }
 
-    
+    //具体的cell设置
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         cell.accessoryType = UITableViewCellAccessoryType.disclosureIndicator
@@ -43,19 +44,17 @@ class MineVC: UITableViewController {
         return cell
     }
  
-
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
-    }
-    
+    //行高
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 50
     }
     
+    //多少组
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 4
     }
     
+    //头部的高度
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         if section == 0 {
             return 220
@@ -65,6 +64,7 @@ class MineVC: UITableViewController {
         }
     }
     
+    //头部视图设置
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         if section == 0 {
             let headView = Bundle.main.loadNibNamed(String(describing:HeaderView.self), owner: self, options: nil)?.first as! HeaderView
@@ -74,6 +74,13 @@ class MineVC: UITableViewController {
             return nil
         }
     }
+    
+    // MARK: - Table view delagate
+    //选中cell操作
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
