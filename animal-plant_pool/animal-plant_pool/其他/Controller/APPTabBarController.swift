@@ -41,9 +41,6 @@ class APPTabBarController: UITabBarController {
         addChildViewController(navMine)
 
         
-        
-        
-        
     }
 
     //统一定制viewController的方法
