@@ -94,7 +94,7 @@ class MessageVC: UIViewController,UIScrollViewDelegate {
     }
     
     //抽出方法设置指示条边长变短的动画效果
-    private func setIndicatorView(scrollView: UIScrollView)-> (UIButton){
+    @discardableResult private func setIndicatorView(scrollView: UIScrollView)-> (UIButton){
         
         let index = Int(Float(scrollView.contentOffset.x)  / Float(scrollView.width))
         let btn = titleView?.subviews[index] as! UIButton
@@ -110,6 +110,7 @@ class MessageVC: UIViewController,UIScrollViewDelegate {
     //按钮点击方法 setContentOffset 动画结束后调用的方法
     func scrollViewDidEndScrollingAnimation(_ scrollView: UIScrollView) {
         
+        //通配符接收参数，不报警告
         setIndicatorView(scrollView: scrollView)
     }
     

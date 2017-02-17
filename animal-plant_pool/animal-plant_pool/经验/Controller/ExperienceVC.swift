@@ -8,28 +8,44 @@
 
 import UIKit
 
-class ExperienceVC: UIViewController {
+class ExperienceVC: UITableViewController {
 
+    var wrapView:UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        automaticallyAdjustsScrollViewInsets = false
+        //设置一个包裹View包住上下两个视图，然后设置给headerView
+        let height:CGFloat = 330
+        wrapView = UIView(frame: CGRect(x: 0, y: 0, width: SCREEN_WIDTH, height: height))
+        
+        //设置bannerView
+        let images = ["weather_overcast_day_big","weather_overcast_night_big",
+                      "weather_rain_night_big","weather_overcast_day_big","weather_overcast_night_big",
+                      "weather_rain_night_big"]
+        
+        let bannerView = BannerView(frame: CGRect(x: 0, y: NAVBAR_HEIGHT, width: SCREEN_WIDTH, height: 200))
+        wrapView.addSubview(bannerView)
+        bannerView.images = images
+        
+        //添加apView
+        let apView = AnimalPlantView(frame: CGRect(x: 0, y: bannerView.frame.maxY , width: view.width, height: height - bannerView.height))
+        wrapView.addSubview(apView)
+        
+        //添加一个分隔线
+        let lineView = UIView(frame: CGRect(x: 0, y: apView.frame.maxY, width: SCREEN_WIDTH, height: 10))
+        wrapView.addSubview(lineView)
+        lineView.backgroundColor = THEME_GRAY
+        
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    // MARK:UITableViewDataSource
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        return wrapView
     }
-    */
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 370
+    }
 
 }

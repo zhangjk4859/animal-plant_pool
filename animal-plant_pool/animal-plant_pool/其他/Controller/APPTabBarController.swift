@@ -20,6 +20,10 @@ class APPTabBarController: UITabBarController {
 //        let navLogin = customizingViewController(vc: loginVC, title: "测试", imageName: "icon_my", selectedImageName: "icon_my_HL")
 //        addChildViewController(loginVC)
         
+        let experienceVC = ExperienceVC()
+        let navExperience = customizingViewController(vc: experienceVC, title: "经验", imageName: "icon_experience", selectedImageName: "icon_experience_HL")
+        addChildViewController(navExperience)
+        
         
         let messageVC = MessageVC()
         let navMessage = customizingViewController(vc: messageVC, title: "消息", imageName: "icon_message", selectedImageName: "icon_message_HL")
@@ -30,9 +34,7 @@ class APPTabBarController: UITabBarController {
         addChildViewController(navDairy)
         
         
-        let experienceVC = ExperienceVC()
-        let navExperience = customizingViewController(vc: experienceVC, title: "经验", imageName: "icon_experience", selectedImageName: "icon_experience_HL")
-        addChildViewController(navExperience)
+        
 
         
         
