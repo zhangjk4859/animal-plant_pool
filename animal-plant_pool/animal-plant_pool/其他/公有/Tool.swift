@@ -16,10 +16,17 @@ func RGB(r:CGFloat,g:CGFloat,b:CGFloat) ->UIColor{
     return UIColor(red: r/225.0, green: g/225.0, blue: b/225.0, alpha: 1.0)
 }
 
+func RGBA(r:CGFloat,g:CGFloat,b:CGFloat,a:CGFloat) ->UIColor{
+    return UIColor(red: r/225.0, green: g/225.0, blue: b/225.0, alpha: a)
+}
+
 
 //主题绿色
 public let THEME_GREEN = RGB(r: 136, g: 242, b: 65)
 public let THEME_GRAY = RGB(r: 210, g: 210, b: 210)
+public let THEME_GREEN_HILIGHTED = RGBA(r: 136, g: 242, b: 65,a:0.5)
+//灰色字体的颜色
+public let GRAY_STRING = RGB(r: 157, g: 158, b: 159)
 
 
 //设备屏幕尺寸

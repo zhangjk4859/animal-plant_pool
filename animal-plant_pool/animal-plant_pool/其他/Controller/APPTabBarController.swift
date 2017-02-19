@@ -16,9 +16,12 @@ class APPTabBarController: UITabBarController {
         tabBar.tintColor = UIColor(red: 136/255, green: 242/255, blue: 65/255, alpha: 1.0)
         
         //开始设置四个子控制器
-//        let loginVC = LoginVC()
-//        let navLogin = customizingViewController(vc: loginVC, title: "测试", imageName: "icon_my", selectedImageName: "icon_my_HL")
-//        addChildViewController(loginVC)
+        let loginVC = LoginPhoneVC()
+        let navLogin = customizingViewController(vc: loginVC, title: "测试", imageName: "icon_my", selectedImageName: "icon_my_HL")
+        addChildViewController(navLogin)
+        
+        
+        
         
         let experienceVC = ExperienceVC()
         let navExperience = customizingViewController(vc: experienceVC, title: "经验", imageName: "icon_experience", selectedImageName: "icon_experience_HL")
@@ -32,11 +35,7 @@ class APPTabBarController: UITabBarController {
         let dairyVC = DairyVC()
         let navDairy = customizingViewController(vc: dairyVC, title: "日记", imageName: "icon_diary", selectedImageName: "icon_diary_HL")
         addChildViewController(navDairy)
-        
-        
-        
-
-        
+    
         
         let mineVC = MineVC()
         let navMine = customizingViewController(vc: mineVC, title: "我的", imageName: "icon_my", selectedImageName: "icon_my_HL")
