@@ -19,6 +19,7 @@
 		0A376F681E518F8200AABE7C /* UIView+Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A376F671E518F8200AABE7C /* UIView+Category.swift */; };
 		0A376F6A1E52AC8E00AABE7C /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A376F691E52AC8E00AABE7C /* LoginVC.swift */; };
 		0A37D3511E54071A008F91C8 /* JKVerticalButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A37D3501E54071A008F91C8 /* JKVerticalButton.swift */; };
+		0A5C72401E5D5AF600A1AB9F /* JKAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5C723F1E5D5AF600A1AB9F /* JKAlertView.swift */; };
 		0A69449D1E581B3D005711BB /* LoginPhoneVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A69449C1E581B3D005711BB /* LoginPhoneVC.swift */; };
 		0A69449F1E581B60005711BB /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A69449E1E581B60005711BB /* RegisterVC.swift */; };
 		0A8E56B71E541727008EFA50 /* MineVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8E56B61E541727008EFA50 /* MineVC.swift */; };
@@ -45,6 +46,7 @@
 		0A376F671E518F8200AABE7C /* UIView+Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Category.swift"; sourceTree = "<group>"; };
 		0A376F691E52AC8E00AABE7C /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		0A37D3501E54071A008F91C8 /* JKVerticalButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JKVerticalButton.swift; sourceTree = "<group>"; };
+		0A5C723F1E5D5AF600A1AB9F /* JKAlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JKAlertView.swift; sourceTree = "<group>"; };
 		0A69449C1E581B3D005711BB /* LoginPhoneVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginPhoneVC.swift; sourceTree = "<group>"; };
 		0A69449E1E581B60005711BB /* RegisterVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
 		0A8E56B61E541727008EFA50 /* MineVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MineVC.swift; sourceTree = "<group>"; };
@@ -265,6 +267,7 @@
 			isa = PBXGroup;
 			children = (
 				0A37D3501E54071A008F91C8 /* JKVerticalButton.swift */,
+				0A5C723F1E5D5AF600A1AB9F /* JKAlertView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -370,6 +373,7 @@
 				0A376F5F1E4DE44600AABE7C /* AnimalPlantView.swift in Sources */,
 				0A376F5D1E4DE37D00AABE7C /* MessageVC.swift in Sources */,
 				0A69449D1E581B3D005711BB /* LoginPhoneVC.swift in Sources */,
+				0A5C72401E5D5AF600A1AB9F /* JKAlertView.swift in Sources */,
 				0A376F6A1E52AC8E00AABE7C /* LoginVC.swift in Sources */,
 				0A37D3511E54071A008F91C8 /* JKVerticalButton.swift in Sources */,
 				0A8E56B91E543CAC008EFA50 /* HeaderView.swift in Sources */,
