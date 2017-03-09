@@ -16,8 +16,8 @@ class APPTabBarController: UITabBarController {
         tabBar.tintColor = UIColor(red: 136/255, green: 242/255, blue: 65/255, alpha: 1.0)
         
         //开始设置四个子控制器
-        let loginVC = LoginPhoneVC()
-        let navLogin = customizingViewController(vc: loginVC, title: "测试", imageName: "icon_my", selectedImageName: "icon_my_HL")
+        let registerVC = RegisterVC()
+        let navLogin = customizingViewController(vc: registerVC, title: "测试", imageName: "icon_my", selectedImageName: "icon_my_HL")
         addChildViewController(navLogin)
         
         
