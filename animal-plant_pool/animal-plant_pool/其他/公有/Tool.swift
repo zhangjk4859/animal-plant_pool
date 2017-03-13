@@ -38,6 +38,51 @@ public let NAVBAR_HEIGHT : CGFloat = 64
 public let TABBAR_HEIGHT : CGFloat = 49
 
 
+//生成颜色的方法
+func createImage(with color: UIColor) -> UIImage {
+    // 1 * 1 的方框
+    let rect = CGRect(x: CGFloat(0.0), y: CGFloat(0.0), width: CGFloat(1.0), height: CGFloat(1.0))
+    //开启画画功能
+    UIGraphicsBeginImageContext(rect.size)
+    //拿到画布
+    let context: CGContext? = UIGraphicsGetCurrentContext()
+    //指定颜色
+    context?.setFillColor(color.cgColor)
+    //指定画布尺寸
+    context?.fill(rect)
+    //让画布变成图片
+    let theImage: UIImage? = UIGraphicsGetImageFromCurrentImageContext()
+    //关闭画画功能
+    UIGraphicsEndImageContext()
+    return theImage!
+}
+
+//判断手机号码正则表达式
+func isMobile(phoneNumber:String) -> Bool{
+    
+    let mobile = "^1(3[0-9]|5[0-35-9]|8[025-9])\\d{8}$"
+    //移动
+    let  CM = "^1(34[0-8]|(3[5-9]|5[017-9]|8[278])\\d)\\d{7}$"
+    //联通
+    let  CU = "^1(3[0-2]|5[256]|8[56])\\d{8}$"
+    //电信
+    let  CT = "^1((33|53|8[09])[0-9]|349)\\d{7}$"
+    let regextestmobile = NSPredicate(format: "SELF MATCHES %@",mobile)
+    let regextestcm = NSPredicate(format: "SELF MATCHES %@",CM )
+    let regextestcu = NSPredicate(format: "SELF MATCHES %@" ,CU)
+    let regextestct = NSPredicate(format: "SELF MATCHES %@" ,CT)
+    if ((regextestmobile.evaluate(with: phoneNumber) == true)
+        || (regextestcm.evaluate(with: phoneNumber)  == true)
+        || (regextestct.evaluate(with: phoneNumber) == true)
+        || (regextestcu.evaluate(with: phoneNumber) == true))
+    {
+        return true
+    }
+    else
+    {
+        return false
+    }
+}
 
 
 

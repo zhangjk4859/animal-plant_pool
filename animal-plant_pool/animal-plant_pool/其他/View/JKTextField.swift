@@ -17,4 +17,18 @@ class JKTextField: UITextField {
         }
         
     }
+    
+    
+    //设置placeHolderLabel垂直居中
+    override func layoutSubviews() {
+        super.layoutSubviews()
+         setValue(self.bounds.size.height, forKeyPath: "_placeholderLabel.height")
+    }
+    
+    //调整rightView的位置
+    override func rightViewRect(forBounds bounds: CGRect) -> CGRect {
+        var textRect = super.rightViewRect(forBounds: bounds)
+        textRect.origin.x -= 10
+        return textRect
+    }
 }

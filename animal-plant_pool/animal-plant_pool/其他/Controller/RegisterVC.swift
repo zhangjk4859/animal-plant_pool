@@ -39,51 +39,8 @@ class RegisterVC: UIViewController,UITextFieldDelegate {
             print("loginAction")
         }
 
-        //判断手机号码正则表达式
-        func isMobile(phoneNumber:String) -> Bool{
-            
-            let mobile = "^1(3[0-9]|5[0-35-9]|8[025-9])\\d{8}$"
-            //移动
-            let  CM = "^1(34[0-8]|(3[5-9]|5[017-9]|8[278])\\d)\\d{7}$"
-            //联通
-            let  CU = "^1(3[0-2]|5[256]|8[56])\\d{8}$"
-            //电信
-            let  CT = "^1((33|53|8[09])[0-9]|349)\\d{7}$"
-            let regextestmobile = NSPredicate(format: "SELF MATCHES %@",mobile)
-            let regextestcm = NSPredicate(format: "SELF MATCHES %@",CM )
-            let regextestcu = NSPredicate(format: "SELF MATCHES %@" ,CU)
-            let regextestct = NSPredicate(format: "SELF MATCHES %@" ,CT)
-            if ((regextestmobile.evaluate(with: phoneNumber) == true)
-                || (regextestcm.evaluate(with: phoneNumber)  == true)
-                || (regextestct.evaluate(with: phoneNumber) == true)
-                || (regextestcu.evaluate(with: phoneNumber) == true))
-            {
-                return true
-            }
-            else
-            {
-                return false
-            }
-        }
         
-        //生成颜色的方法
-        func createImage(with color: UIColor) -> UIImage {
-            // 1 * 1 的方框
-            let rect = CGRect(x: CGFloat(0.0), y: CGFloat(0.0), width: CGFloat(1.0), height: CGFloat(1.0))
-            //开启画画功能
-            UIGraphicsBeginImageContext(rect.size)
-            //拿到画布
-            let context: CGContext? = UIGraphicsGetCurrentContext()
-            //指定颜色
-            context?.setFillColor(color.cgColor)
-            //指定画布尺寸
-            context?.fill(rect)
-            //让画布变成图片
-            let theImage: UIImage? = UIGraphicsGetImageFromCurrentImageContext()
-            //关闭画画功能
-            UIGraphicsEndImageContext()
-            return theImage!
-        }
+
         
         func setupUI(){
             //背景色设置为灰色
@@ -120,7 +77,6 @@ class RegisterVC: UIViewController,UITextFieldDelegate {
             self.phoneTextField = phoneTextField
            
     
-            
             //验证码输入框
             let codeTextField = JKTextField(frame: CGRect(x: leftMargin, y: phoneTextField.frame.maxY + gap, width: SCREEN_WIDTH, height: height))
             view.addSubview(codeTextField)
@@ -131,6 +87,20 @@ class RegisterVC: UIViewController,UITextFieldDelegate {
             codeTextField.clearButtonMode = UITextFieldViewMode.whileEditing
             codeTextField.leftViewMode = UITextFieldViewMode.always
             codeTextField.leftView = UIView(frame: CGRect(x: 0, y: 0, width: (height - phoneLabel.intrinsicContentSize.width) / 2, height: height))
+            codeTextField.rightViewMode = .always
+            let rightBtn = UIButton(frame: .init(x: 0, y: 0, width: height * 2, height: height * 0.5))
+            rightBtn.setTitle("发送验证码", for: .normal)
+            rightBtn.titleLabel?.font = UIFont.systemFont(ofSize: 12)
+            rightBtn.setBackgroundImage(createImage(with:RGB(r: 228, g: 62, b: 65) ), for: .normal)
+            rightBtn.setBackgroundImage(createImage(with: RGBA(r: 228, g: 62, b: 65, a: 0.3)), for: .highlighted)
+            rightBtn.layer.cornerRadius = rightBtn.height * 0.5
+            rightBtn.layer.masksToBounds = true
+            rightBtn.handldControlEvent(controlEvent: .touchUpInside) {
+                //发送验证码
+                
+                //倒计时
+            }
+            codeTextField.rightView = rightBtn
             
             
             //添加密码输入框
@@ -196,48 +166,9 @@ extension RegisterVC{
     //动态输入的时候调用的方法
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         let strLength: Int = textField.text!.characters.count - range.length + string.characters.count
-        if textField == phoneTextField{//手机号码输入框
-            //限制手机号为11位，预先加上一位，防止删除的时候无法作用
-            
-            if strLength < 11{
-                //按钮关闭
-                phoneIsTrue = false
-            }else if strLength == 11 {//检查是不是手机号
-                
-                if !isMobile(phoneNumber: textField.text! + string){
-                    //不是手机号码，提示用户
-                    JKAlertView.showMessage("您输入是手机号码格式不对", duration: 3)
-                }else{
-                    //按钮点亮
-                    phoneIsTrue = true
-                }
-            }else {//大于11位
-                
-                //不可继续输入数字
-                return false
-            }
-            
-            //如果都符合条件，登录按钮可用
-            loginBtn.isEnabled = phoneIsTrue && passwordIsTrue
-            
-            return true
-            
-        }else{//密码输入框
-            
-            //密码大于六位
-            if strLength >= 6{
-                passwordIsTrue = true
-            }else{
-                passwordIsTrue = false
-            }
-            
-            //如果都符合条件，登录按钮可用
-            loginBtn.isEnabled = phoneIsTrue && passwordIsTrue
-            
-            //可以继续输入
-            return true
-        }
+        //四个输入框都不为空的时候按钮点亮
         
+        return true
     }
     
 }

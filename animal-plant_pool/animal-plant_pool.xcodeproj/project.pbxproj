@@ -22,6 +22,7 @@
 		0A5C72401E5D5AF600A1AB9F /* JKAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5C723F1E5D5AF600A1AB9F /* JKAlertView.swift */; };
 		0A69449D1E581B3D005711BB /* LoginPhoneVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A69449C1E581B3D005711BB /* LoginPhoneVC.swift */; };
 		0A69449F1E581B60005711BB /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A69449E1E581B60005711BB /* RegisterVC.swift */; };
+		0A7E4F4F1E7254FD00EDA663 /* UIButton+Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7E4F4E1E7254FD00EDA663 /* UIButton+Category.swift */; };
 		0A8E56B71E541727008EFA50 /* MineVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8E56B61E541727008EFA50 /* MineVC.swift */; };
 		0A8E56B91E543CAC008EFA50 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8E56B81E543CAC008EFA50 /* HeaderView.swift */; };
 		0A8E56BB1E543CD8008EFA50 /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A8E56BA1E543CD8008EFA50 /* HeaderView.xib */; };
@@ -50,6 +51,7 @@
 		0A5C723F1E5D5AF600A1AB9F /* JKAlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JKAlertView.swift; sourceTree = "<group>"; };
 		0A69449C1E581B3D005711BB /* LoginPhoneVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginPhoneVC.swift; sourceTree = "<group>"; };
 		0A69449E1E581B60005711BB /* RegisterVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
+		0A7E4F4E1E7254FD00EDA663 /* UIButton+Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+Category.swift"; sourceTree = "<group>"; };
 		0A8E56B61E541727008EFA50 /* MineVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MineVC.swift; sourceTree = "<group>"; };
 		0A8E56B81E543CAC008EFA50 /* HeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		0A8E56BA1E543CD8008EFA50 /* HeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeaderView.xib; sourceTree = "<group>"; };
@@ -278,6 +280,7 @@
 		0A376F661E5162F100AABE7C /* 公有功能 */ = {
 			isa = PBXGroup;
 			children = (
+				0A7E4F4E1E7254FD00EDA663 /* UIButton+Category.swift */,
 				0A376F671E518F8200AABE7C /* UIView+Category.swift */,
 				0A8E56EC1E553EA3008EFA50 /* Tool.swift */,
 			);
@@ -371,6 +374,7 @@
 				0A8E56F81E5551A0008EFA50 /* CommentTableVC.swift in Sources */,
 				0A07BAA81E4CA69700AA7E8B /* AppDelegate.swift in Sources */,
 				0A8E56B71E541727008EFA50 /* MineVC.swift in Sources */,
+				0A7E4F4F1E7254FD00EDA663 /* UIButton+Category.swift in Sources */,
 				0A376F681E518F8200AABE7C /* UIView+Category.swift in Sources */,
 				0A8E56ED1E553EA3008EFA50 /* Tool.swift in Sources */,
 				0A376F5F1E4DE44600AABE7C /* AnimalPlantView.swift in Sources */,
