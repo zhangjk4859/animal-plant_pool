@@ -14,13 +14,51 @@ class RegisterVC: UIViewController,UITextFieldDelegate {
         var loginBtn:UIButton!
         //手机号码输入框全局变量
         var phoneTextField :UITextField!
+        //验证码输入框
+        var codeTextField : UITextField!
         //密码输入框全局变量
         var passwordTextField :UITextField!
+        //确认密码输入框
+        var confirmPasswordTextField :UITextField!
         //手机号码可用记录状态
         var phoneIsTrue:Bool!
         //密码可用记录状态
         var passwordIsTrue:Bool!
-        
+        //发送短信按钮
+        var rightBtn:UIButton!
+        //短信倒计时的计时器
+        private var countdownTimer: Timer?
+        //记录输入框有内容的个数
+        var textFieldCount : Int = 0
+    
+        //剩余时间
+        var remainingSeconds: Int = 0 {
+            willSet {
+                rightBtn.setTitle("重新获取\(newValue)秒", for: .normal)
+                rightBtn.titleLabel?.font = UIFont.systemFont(ofSize: 12)
+                if newValue <= 0 {
+                    rightBtn.setTitle("发送验证码", for: .normal)
+                    rightBtn.titleLabel?.font = UIFont.systemFont(ofSize: 12)
+                    isCounting = false
+                }
+            }
+        }
+        //记录倒计时状态
+        var isCounting = false {
+            willSet {
+                if newValue {
+                    countdownTimer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: { (Timer) in
+                        self.remainingSeconds -= 1
+                    })
+                    remainingSeconds = 30
+                } else {
+                    countdownTimer?.invalidate()
+                    countdownTimer = nil
+                }
+                rightBtn.isEnabled = !newValue
+            }
+        }
+    
         override func viewDidLoad() {
             super.viewDidLoad()
             
@@ -99,8 +137,13 @@ class RegisterVC: UIViewController,UITextFieldDelegate {
                 //发送验证码
                 
                 //倒计时
+                isCounting = true
+    
             }
+            self.rightBtn = rightBtn
             codeTextField.rightView = rightBtn
+            self.codeTextField = codeTextField
+            codeTextField.delegate = self
             
             
             //添加密码输入框
@@ -137,6 +180,7 @@ class RegisterVC: UIViewController,UITextFieldDelegate {
             confirmPWDTextField.clearButtonMode = UITextFieldViewMode.whileEditing
             confirmPWDTextField.isSecureTextEntry = true
             confirmPWDTextField.delegate = self
+            self.confirmPasswordTextField = confirmPWDTextField
             
             //添加注册按钮
             let loginBtn = UIButton(frame: CGRect(x: gap * 0.5, y: confirmPWDTextField.frame.maxY + gap , width: SCREEN_WIDTH - gap, height: height))
@@ -156,20 +200,30 @@ class RegisterVC: UIViewController,UITextFieldDelegate {
             //隐藏底部栏
             hidesBottomBarWhenPushed = true
         }
-        
-        
+    
 }
+
+
     
 extension RegisterVC{
     
     
     //动态输入的时候调用的方法
-    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        let strLength: Int = textField.text!.characters.count - range.length + string.characters.count
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        print("textFieldDidEndEditing")
         //四个输入框都不为空的时候按钮点亮
-        
-        return true
+        if (phoneTextField.text?.characters.count)! > 0     &&
+            (codeTextField.text?.characters.count)! > 0     &&
+            (passwordTextField?.text?.characters.count)! > 0    &&
+            (confirmPasswordTextField?.text?.characters.count)! > 0
+        {
+            loginBtn.isEnabled = true
+        }else{
+            loginBtn.isEnabled = false
+        }
     }
+
+    
     
 }
 
