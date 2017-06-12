@@ -61,7 +61,7 @@ class BannerView: UIView,UIScrollViewDelegate {
             indicator?.numberOfPages = pageCount!
             indicator?.currentPage = 0
             
-            //添加一个定时器 自己挂掉之前先放掉计时器的绳子
+            //添加一个定时器 注意内存泄露
             timer = Timer(timeInterval: (timeInterval==nil ? 3 : timeInterval! ), target: self, selector: #selector(self.nextPage), userInfo: nil, repeats: true)
             RunLoop.main.add(timer, forMode: RunLoopMode.defaultRunLoopMode)
             //从第一个开始

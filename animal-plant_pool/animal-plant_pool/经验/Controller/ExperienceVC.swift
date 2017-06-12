@@ -21,8 +21,11 @@ class ExperienceVC: UITableViewController {
         wrapView = UIView(frame: CGRect(x: 0, y: 0, width: SCREEN_WIDTH, height: height))
         
         //设置bannerView
-        let images = ["weather_overcast_day_big","weather_overcast_night_big",
-                      "weather_rain_night_big","weather_overcast_day_big","weather_overcast_night_big",
+        let images = ["weather_overcast_day_big",
+                      "weather_overcast_night_big",
+                      "weather_rain_night_big",
+                      "weather_overcast_day_big",
+                      "weather_overcast_night_big",
                       "weather_rain_night_big"]
         
         let bannerView = BannerView(frame: CGRect(x: 0, y: NAVBAR_HEIGHT, width: SCREEN_WIDTH, height: 200))

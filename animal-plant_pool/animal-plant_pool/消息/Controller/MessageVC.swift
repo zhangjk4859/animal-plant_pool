@@ -20,7 +20,7 @@ class MessageVC: UIViewController,UIScrollViewDelegate {
         super.viewDidLoad()
 
         view.backgroundColor = UIColor.lightGray
-        let titles = ["评论","点赞","消息"]
+        let titles = ["评论","点赞","消息xx"]
         //顶部的titleView,平均分为三份，高度为tabbar的49
         titleView = UIView(frame: CGRect(x: 0, y: NAVBAR_HEIGHT, width: SCREEN_WIDTH, height: TABBAR_HEIGHT))
         view.addSubview(titleView!)
@@ -94,7 +94,7 @@ class MessageVC: UIViewController,UIScrollViewDelegate {
     }
     
     //抽出方法设置指示条边长变短的动画效果
-    @discardableResult private func setIndicatorView(scrollView: UIScrollView)-> (UIButton){
+    @discardableResult func setIndicatorView(scrollView: UIScrollView)-> (UIButton){
         
         let index = Int(Float(scrollView.contentOffset.x)  / Float(scrollView.width))
         let btn = titleView?.subviews[index] as! UIButton
@@ -105,6 +105,11 @@ class MessageVC: UIViewController,UIScrollViewDelegate {
         return btn
     }
     
+    
+    
+}
+
+extension MessageVC{
     // MARK: - scrollView Delegate
     
     //按钮点击方法 setContentOffset 动画结束后调用的方法
@@ -127,9 +132,9 @@ class MessageVC: UIViewController,UIScrollViewDelegate {
         let btn = setIndicatorView(scrollView: scrollView)
         //点击对应的按钮
         btnClick(btn)
-
+        
     }
-    
-    
+
     
 }
+

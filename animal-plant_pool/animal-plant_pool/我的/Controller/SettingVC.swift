@@ -115,6 +115,8 @@ class SettingVC: UIViewController,UITableViewDataSource,UITableViewDelegate {
 
 extension SettingVC{
     
+    // MARK: - tableView Delegate
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         switch section {

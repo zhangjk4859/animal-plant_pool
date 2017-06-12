@@ -126,7 +126,7 @@ class DairyVC: UIViewController {
         let item = UIBarButtonItem(image: img, style: UIBarButtonItemStyle.plain, target: self, action: nil)
         self.navigationItem.rightBarButtonItem = item
         //设置背景为白色
-        view.backgroundColor = UIColor(red: 210/255, green: 210/255, blue: 210/255, alpha: 1.0)
+        view.backgroundColor = RGBA(r: 210, g: 210, b: 210, a: 1.0)
     }
     
     

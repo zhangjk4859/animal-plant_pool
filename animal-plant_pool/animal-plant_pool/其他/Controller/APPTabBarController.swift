@@ -37,9 +37,6 @@ class APPTabBarController: UITabBarController {
         let dairyVC = DairyVC()
         let navDairy = customizingViewController(vc: dairyVC, title: "日记", imageName: "icon_diary", selectedImageName: "icon_diary_HL")
         addChildViewController(navDairy)
-    
-        
-        
 
         
     }
